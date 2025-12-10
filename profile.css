@@ -1,0 +1,152 @@
+/* ---------- BODY & BACKGROUND ---------- */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* ---------- PROFILE CONTAINER ---------- */
+.profile-container {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #8a2be2;
+    text-shadow: 0 0 10px #8a2be2, 0 0 20px #00ffff;
+}
+
+/* ---------- DASHBOARD ICON ---------- */
+.dashboard-icon {
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dashboard-icon div {
+    height: 3px;
+    background-color: #00ffff;
+    margin: 6px 0;
+    border-radius: 2px;
+}
+
+/* Dropdown menu (hidden by default) */
+.dashboard-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 160px;
+    z-index: 10;
+}
+.dashboard-icon:hover .dashboard-dropdown {
+    display: flex;
+}
+.dashboard-dropdown a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dashboard-dropdown a i {
+    margin-right: 8px;
+    color: #00ffff;
+}
+
+.dashboard-dropdown a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ---------- PROFILE DETAILS ---------- */
+.profile-info, .units-info {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.profile-info h2, .units-info h2 {
+    color: #8a2be2;
+    text-shadow: 0 0 8px #8a2be2, 0 0 15px #00ffff;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.profile-info strong {
+    color: #00ffff;
+}
+
+/* ---------- UNITS ---------- */
+.units-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.units-info li {
+    background: rgba(255,255,255,0.1);
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+/* ---------- LOGOUT BUTTON ---------- */
+button#logoutBtn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8a2be2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button#logoutBtn:hover {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 450px) {
+    .profile-container {
+        width: 90%;
+        padding: 40px 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+}

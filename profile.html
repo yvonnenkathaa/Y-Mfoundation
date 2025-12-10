@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y&M Foundation - Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <script defer src="profile.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="header">
+            <h1>Welcome, <span id="studentName">Student</span>!</h1>
+            <!-- Dashboard Hamburger Icon -->
+            <div class="dashboard-icon" id="dashboardIcon">
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- Dropdown menu -->
+                <div class="dashboard-dropdown" id="dashboardDropdown">
+                    <a href="resources.html"><i class="fas fa-book"></i> Resources</a>
+                    <a href="units.html"><i class="fas fa-tasks"></i> Units Registration</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Details -->
+        <div class="profile-info">
+            <h2>Profile Details</h2>
+            <p><strong>Full Name:</strong> <span id="fullName">John Doe</span></p>
+            <p><strong>Username:</strong> <span id="username">student123</span></p>
+            <p><strong>Email:</strong> <span id="email">student@example.com</span></p>
+        </div>
+
+        <!-- Registered Units -->
+        <div class="units-info">
+            <h2>Registered Units</h2>
+            <ul id="unitList">
+                <!-- Units will populate via JS -->
+            </ul>
+        </div>
+
+        <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+</body>
+</html>

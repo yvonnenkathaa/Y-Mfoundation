@@ -1,0 +1,137 @@
+/* ---------- BODY & BACKGROUND ---------- */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background: url('images/bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* ---------- RESOURCES CONTAINER ---------- */
+.resources-container {
+    background: rgba(0,0,0,0.55);
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 600px;
+    max-width: 90%;
+    margin: 50px auto;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #8a2be2;
+    text-shadow: 0 0 10px #8a2be2, 0 0 20px #00ffff;
+    font-size: 28px;
+}
+
+/* ---------- DASHBOARD ICON ---------- */
+.dashboard-icon {
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dashboard-icon div {
+    height: 3px;
+    background-color: #00ffff;
+    margin: 6px 0;
+    border-radius: 2px;
+}
+
+.dashboard-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 160px;
+    z-index: 10;
+}
+
+.dashboard-dropdown a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dashboard-dropdown a i {
+    margin-right: 8px;
+    color: #00ffff;
+}
+
+.dashboard-dropdown a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ---------- RESOURCE CARDS ---------- */
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resource-card {
+    background: rgba(255,255,255,0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.resource-card:hover {
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.resource-card span {
+    font-weight: bold;
+    color: #00ffff;
+}
+
+.resource-card button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #8a2be2;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.resource-card button:hover {
+    background-color: #00ffff;
+    color: #000;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 450px) {
+    .resources-container {
+        padding: 30px 20px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .resource-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
